@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电子采购沙盘系统</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<!-- bootstrap-3.3.7 -->
+    <link rel="stylesheet" type="text/css" href="../js/bootstrap-3.3.7/css/bootstrap.min.css">
+     <!-- basic scripts -->
+	<script src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<!-- @*datetime控件*@ -->
+    <link href="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+   	<script src="../js/bootstrap-datetimepicker/moment-with-locales.js"></script>
+   	<script src="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+   	<script src="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+        <div class="bg">
+        	<!-- 生产区 -->
+   			<div class="side-box">
+				<div class="rect-liner g-liner">
+					<span class="type-btn color-g right0 rotate90 noselect">生产区</span>
+					<img class="back-btn back-btn-left rotate90" src="../images/back-btn.png" alt="返回按钮">
+				</div>
+				<!-- 一级菜单 first-level-menu-->
+				<div class="side-btns g-btns first-level-menu"  belongArea="生产区">
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-1.png" alt="BOM需求管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">BOM需求管理</span>
+						</div>
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-2.png" alt="生产计划管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">生产计划管理</span>
+						</div>
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-3.png" alt="产品结构管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">产品结构管理</span>
+						</div>
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-4.png" alt="生产成本管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">生产成本管理</span>
+						</div>
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-5.png" alt="生产加工管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">生产加工管理</span>
+						</div>
+						<div class="btn-bg-rect btn-bg-rect-side">
+							<div class="btn-bg-white-circle">
+								<img class="menu-icon" src="../images/icon-g-6.png" alt="出货计划管理">
+							</div>
+							<span class="menu-title menu-title-left rotate90">出货计划管理</span>
+						</div>
+				</div>
+				<!-- 子页面 -->
+				<div class="table-box table-box-side">
+					<div id="g-wapper"  class="child-content-wapper rotate90"">
+						<!-- 加载子界面 -->
+					</div>
+				</div>
+			</div>
+
+			<!-- 中间区（主菜单+采购区） -->
+			<div class="center-box">
+				<!-- 主菜单 -->
+				<div class="center-box-child sys-box">
+					<img class="sys-logo" src="../images/logo-nos.png" alt="公司logo" >
+					<span class="sys-name color-g">电子采购沙盘系统</span>
+					<div class="sys-time-box">
+					<div class="sys-timer">
+						<span class="time-number time-month-1">0</span><span class="time-number time-month-2">0</span>月<span class="time-number time-day-1">0</span><span class="time-number time-day-2">0</span>日
+						<span class="time-min">00</span>
+						<span class="time-sec">00</span>
+					</div>
+						<img class="sys-day-night" src="../images/icon-w-sun.png" alt="白天/黑夜icon">
+					</div>
+					<div class="sys-menu">
+						<div class="sys-menu-child sys-menu-g">
+							<img id="menuBtnG" class="sys-menu-img" src="../images/menu-btn-bg.png" alt="按钮可选择背景">
+							<span class="sys-menu-text rotate90">生产<br>流程</span>
+						</div>
+						<div class="sys-menu-child sys-menu-p">
+							<img id="menuBtnP" class="sys-menu-img" src="../images/menu-btn-bg.png" alt="按钮可选择背景">
+							<span class="sys-menu-text rotate-90">销售<br>流程</span>
+						</div>
+						<div class="sys-menu-child sys-menu-y">
+							<img id="menuBtnY" class="sys-menu-img" src="../images/menu-btn-bg.png" alt="按钮可选择背景">
+							<span class="sys-menu-text sys-menu-y-text">采购<br>流程</span>
+						</div>
+					</div>
+				</div>
+				<!-- 采购区 -->
+				<div class="center-box-child y-box">
+					<div class="rect-liner y-liner">
+						<span class="type-btn y-type-btn noselect">采购区</span>
+						<img class="back-btn" src="../images/back-btn.png" alt="返回按钮">
+					</div>
+					<!-- 一级菜单 first-level-menu-->
+					<div style="display: none;" class="y-btns first-level-menu" belongArea="采购区" >
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-1.png" alt="询价比管理">
+							</div>
+							<span class="menu-title">询价比管理</span>
+						</div>
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-2.png" alt="招投标管理">
+							</div>
+							<span class="menu-title">招投标管理</span>
+						</div>
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-3.png" alt="供应商管理">
+							</div>
+							<span class="menu-title">供应商管理</span>
+						</div>
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-4.png" alt="采购合同管理">
+							</div>
+							<span class="menu-title">采购合同管理</span>
+						</div>
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-5.png" alt="采购申请管理">
+							</div>
+							<span class="menu-title">采购申请管理</span>
+						</div>
+						<div class="btn-bg-rect">
+							<div class="btn-bg-white-circle btn-bg-white-circle-y">
+								<img class="menu-icon" src="../images/icon-y-6.png" alt="仓储物料管理">
+							</div>
+							<span class="menu-title">仓储物料管理</span>
+						</div>
+					</div>
+					<!-- 子页面 -->
+					<div class="table-box" style="display: block;">
+						<div class="upper-btns-box">
+							<span style="    float: left; line-height: 25px;">信息搜索&nbsp;从&nbsp;</span>
+							<div class="input-group date form_date table-upper-btn my-date-div" data-date=""  data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+			                    <input class="form-control" size="16" type="text" value="" readonly>
+			                </div>
+			                <span style="position: absolute;left: 208px;line-height: 25px;">至</span>
+							<div class="input-group date form_date table-upper-btn my-date-div" data-date=""  data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="left: 2em;">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+			                    <input class="form-control" size="16" type="text" value="" readonly>
+			                </div>
+							<!-- <div class="table-upper-btn calendar-box">
+								<img class="calendar-icon" src="../images/table/calendar-icon.png" alt="日历图标">
+								<input class="calendar-input" readonly="readonly" type="text">
+							</div>
+							至
+							<div class="table-upper-btn calendar-box">
+								<img class="calendar-icon" src="../images/table/calendar-icon.png" alt="日历图标">
+								<input class="calendar-input" readonly="readonly" type="text">
+							</div> -->
+
+							
+							<div class="search-box">
+								<input class="table-btn color-g" type="button" value="查询">
+								<input class="table-upper-btn color-g" type="button" value="按开标时间">
+								<input class="table-upper-btn color-g" type="button" value="按工程状态">
+							</div>
+						</div>
+						<table class="y-table">
+							<thead>
+								<th class="w35p">工程名称</th>
+								<th class="w25p">招标单位</th>
+								<th class="w10p">开标时间</th>
+								<th class="w10p">工程状态</th>
+								<th class="w20p">操作</th>
+							</thead>
+							<tbody class="my-scroll">
+								<tr>
+									<td class="w35p">华润万家西北区西安明光路项目结构加固工程</td>
+									<td class="w25p">深圳市中诺思科技股份有限公司</td>
+									<td class="w10p">2018-03-18</td>
+									<td class="w10p color-green">运行中</td>
+									<td class="w20p">
+										<input class="table-btn color-yellow" type="button" value="修改">
+										<input class="table-btn color-g" type="button" value="开标">
+									</td>
+								</tr>
+								<tr>
+									<td class="w35p">华润万家西北区西安明光路项目结构加固工程</td>
+									<td class="w25p">深圳市中诺思科技股份有限公司</td>
+									<td class="w10p">2018-03-18</td>
+									<td class="w10p color-green">运行中</td>
+									<td class="w20p">
+										<input class="table-btn color-yellow" type="button" value="修改">
+										<input class="table-btn color-g" type="button" value="开标">
+									</td>
+								</tr>
+								<tr>
+									<td class="w35p">华润万家西北区西安明光路项目结构加固工程</td>
+									<td class="w25p">深圳市中诺思科技股份有限公司</td>
+									<td class="w10p">2018-03-18</td>
+									<td class="w10p color-green">运行中</td>
+									<td class="w20p">
+										<input class="table-btn color-yellow" type="button" value="修改">
+										<input class="table-btn color-g" type="button" value="开标">
+									</td>
+								</tr>
+								<tr>
+									<td class="w35p">华润万家西北区西安明光路项目结构加固工程</td>
+									<td class="w25p">深圳市中诺思科技股份有限公司</td>
+									<td class="w10p">2018-03-18</td>
+									<td class="w10p color-green">运行中</td>
+									<td class="w20p">
+										<input class="table-btn color-yellow" type="button" value="修改">
+										<input class="table-btn color-g" type="button" value="开标">
+									</td>
+								</tr>
+								<tr>
+									<td class="w35p">华润万家西北区西安明光路项目结构加固工程</td>
+									<td class="w25p">深圳市中诺思科技股份有限公司</td>
+									<td class="w10p">2018-03-18</td>
+									<td class="w10p color-green">运行中</td>
+									<td class="w20p">
+										<input class="table-btn color-yellow" type="button" value="修改">
+										<input class="table-btn color-g" type="button" value="开标">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- 销售区 -->
+			<div class="side-box right0">
+				<div class="rect-liner p-liner">
+					<span class="type-btn p-type-btn color-p left0 rotate-90 noselect">销售区</span>
+					<img class="back-btn back-btn-right rotate-90" src="../images/back-btn.png" alt="返回按钮">
+				</div>
+				<!-- 一级菜单 first-level-menu-->
+				<div class="side-btns p-btns first-level-menu" belongArea="销售区">
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-1.png" alt="客户信息管理">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">客户信息管理</span>
+					</div>
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-2.png" alt="销售计划管理">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">销售计划管理</span>
+					</div>
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-3.png" alt="销售订单管理">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">销售订单管理</span>
+					</div>
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-4.png" alt="订单发货管理">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">订单发货管理</span>
+					</div>
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-5.png" alt="开票信息管理">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">开票信息管理</span>
+					</div>
+					<div class="btn-bg-rect btn-bg-rect-side">
+						<div class="btn-bg-white-circle bottom0">
+							<img class="menu-icon" src="../images/icon-p-6.png" alt="销售统计分析">
+						</div>
+						<span class="menu-title menu-title-right rotate-90">销售统计分析</span>
+					</div>
+				</div>
+				<!-- 子页面 -->
+				<div class="table-box table-box-side">
+					<div id="p-wapper" class="child-content-wapper rotate-90">
+						<!-- 加载子界面 -->
+					</div>
+				</div>
+			</div>
+			
+        </div>
+       
+		<!-- <script src="../js/base.js"></script> -->
+        <!-- 旋转插件 -->
+		<script src="../js/jquery.rotate.min.js"></script>
+		
+		<script src="../js/my-animate.js"></script>
+</body>
+</html>
