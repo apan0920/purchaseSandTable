@@ -1,0 +1,78 @@
+/*
+* @Author: pz
+* @Date:   2018-03-27 16:42:12
+* @Last Modified by:   pz
+* @Last Modified time: 2018-04-03 17:34:39
+*/
+body { font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1.42857143; color:#FFF; background: #f6f6f6;margin: 0;}
+html,body { width:100%; height: 100%;min-width: 800px;min-height: 600px; margin: 0;}
+#wrapper{height: 100%;min-width: 800px;min-height: 600px;position: relative;}
+
+
+
+ /*背景*/
+.tooltip{transform: rotate(90deg) !important;}
+.bg {position: relative;background: url('../images/sys-bg.png'); width: 100%; height:100%; background-repeat: no-repeat; background-size: 100% 100%;color:#FFF;}
+
+/*两侧盒子*/
+.side-box{position: absolute; width: 21.5%; height: 100%;}
+.rect-liner {position: absolute; top: 0px; width: 69px; height: 100%;}
+.type-btn{ position: absolute;  width: 150px; height: 54px; top: 50%; margin-top: -27px; margin-right: -40px; text-align: center; font-size: 2.1em; letter-spacing: 2px; font-weight: bold; line-height: 50px;background-image: url(../images/type-btn-bg.png); z-index: 9;}
+.type-btn-big{width: 247px;margin-right:-88px;background-image: url(../images/type-btn-bg-big.png);}
+
+.back-btn{display: none;position: absolute;  width: 31px; height: 25px; right: 30px;top: 50%; margin-top: -12px;cursor: pointer; z-index: 9;}
+.back-btn-left{top: 92%; left: 50%; margin-left: -12px;}
+.back-btn-right{top: 8%; left: 50%; margin-left: -12px;}
+/*两侧按钮盒子*/
+.side-btns{position: absolute;width: 234px; height: 96%; top: 50%; left: calc((100% - 69px)/2); transform: translate(-50%,-50%);}
+
+/*生产区+销售区+采购区 菜单按钮--start*/
+.btn-bg-rect{position: relative;display: inline-block; height: 110px; line-height: 110px;width: 30%; margin: 1% 1% 0 1%;; background: url(../images/btn-bg-rect.png); background-size: 100% 100%; cursor: pointer;}
+.btn-bg-rect-side{width: 110px; height: 32.5%;background: url(../images/btn-bg-rect-side.png); background-size: 100% 100%; } 
+.btn-bg-white-circle {position: absolute; width: 64px; height: 64px; margin: 20px; border-style: solid; border-width: 3px; border-color: rgb(255, 255, 255); border-radius: 50%; background-image: -moz-linear-gradient( 90deg, rgb(223,223,223) 0%, rgb(255,255,255) 100%); background-image: -webkit-linear-gradient( 90deg, rgb(223,223,223) 0%, rgb(255,255,255) 100%); background-image: -ms-linear-gradient( 90deg, rgb(223,223,223) 0%, rgb(255,255,255) 100%); background: linear-gradient( 90deg, rgb(223,223,223) 0%, rgb(255,255,255) 100%);}
+
+.menu-icon{display: block; margin: 22%;}
+.menu-title{ position: absolute; width: 100%; left: 40%;display: inline-block; font-size: 1.4em; font-weight: bold; white-space: nowrap; }
+.menu-title-right {bottom: 40%;left: 0; }
+.menu-title-left {top: 40%; left: 0;}
+/*生产区+销售区+采购区 菜单按钮--end*/
+
+/*生产区*/
+.g-liner{right: 0; background-image: -moz-linear-gradient( 180deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%); background-image: -webkit-linear-gradient( 180deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%); background-image: -ms-linear-gradient( 180deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%);}
+
+/*销售区*/
+.p-liner{left: 0; background-image: -moz-linear-gradient( 0deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%); background-image: -webkit-linear-gradient( 0deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%); background-image: -ms-linear-gradient( 0deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255, 0.5) 100%);}
+.p-btns{left: calc((100% + 69px)/2);}
+.p-type-btn{margin-left: -40px; }
+
+/*系统菜单区*/
+.center-box{position: absolute; width: 56.5%; height: 100%; top: 0; left: 50%; transform: translateX(-50%); overflow:hidden; }
+.center-box-child{position: absolute;width: 100%; border-radius: 5px;overflow:hidden; }
+.sys-box{ height: 60%;}
+.sys-logo{position: absolute; width: 177px; height: 32px; top: 24px; left: 24px;}
+.sys-name{position: absolute; top: 25px; left: 50%; transform: translateX(-50%);font-size: 2.8em;/*font-size: 3em;*/  }
+
+/*时间框*/
+.sys-time-box{position: absolute;top: 4%;right: 8px;width: 25%; }
+.sys-timer{position: absolute; width: 80%; font-size: 1.5em; text-align: right; }
+.time-number{display: inline-block; width: 23px; height: 40px; line-height: 40px; background: url(../images/time-bg.png); background-size: 100% 100%; margin: 0 2%; text-align: center; vertical-align: bottom;}
+/*隐藏域-分-秒*/
+.time-min, .time-sec{display: none;color: white;}
+.sys-day-night{position: absolute;right: 0;width: 40px;}
+
+.sys-menu{position: absolute; width: 408px; height: 400px; bottom: 25%; font-size: 2.5em; text-align: center; background: url(../images/menu-bg.png); background-size: 100% 100%; left: 50%; transform: translateX(-50%);}
+.sys-menu-child{position: absolute; width: 232px; height: 231px;color: #1297a3;}    
+.sys-menu-img{position: absolute; width: 100%; height: 100%;left: 0;}
+
+.sys-menu-child-sel{background:url(../images/menu-btn-bg-sel.png);background-size: 100% 100%; }
+
+.sys-menu-g{top: 17%; left: -39%;}
+.sys-menu-p{top: 18%; right: -39%;}
+.sys-menu-y{top: 78%; left: 20%;}
+
+.sys-menu-text{display: block; margin-top: 64px; letter-spacing: 2px;}
+/*采购区*/
+.y-box{height: 38%; bottom: 0;}
+.y-liner{ width: 100%; height: 69px; bottom: 0; background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255,0.5) 100%); background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255,0.5) 100%); background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0.30196) 0%, rgba(255,255,255,0.5) 100%);}
+.y-type-btn{color: #ffc018; left: 50%; margin-left: -75px; top: 8px; margin-top: 0; }
+.y-btns{position: absolute; width: 100%; margin: 0 2%; top: calc((100% + 69px)/2); left: 50%; transform: translate(-50%,-50%);}

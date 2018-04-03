@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="child-html">
+<head>
+	<meta charset="UTF-8">
+	<title>电子采购沙盘系统</title>
+	<!-- bootstrap-3.3.7 -->
+    <link rel="stylesheet" type="text/css" href="../js/bootstrap-3.3.7/css/bootstrap.min.css">
+	<!-- bootstrap  datetime控件 -->
+    <link href="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <!-- 自定义css -->
+   	<link rel="stylesheet" href="../css/side-iframe.css">
+   	<link rel="stylesheet" href="../css/common.css">
+</head>
+<body class="child-body">
+      
+	<div class="upper-btns-box">
+		<span class="search-prompt-text">信息搜索&nbsp;从&nbsp;</span>
+		<div class="search-date-box">
+			<div class="input-group date form_date table-upper-btn my-date-div" data-date=""  data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+	            <input class="form-control" size="16" type="text" value="" readonly>
+	        </div>
+	        <span class="search-prompt-text">至</span>
+			<div class="input-group date form_date table-upper-btn my-date-div" data-date=""  data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+	            <input class="form-control" size="16" type="text" value="" readonly>
+	        </div>
+	        <input class="table-btn color-g" type="button" value="查询">
+        </div>
+		<div class="search-box">
+			
+			<input class="table-upper-btn color-g" type="button" value="按开标时间">
+			<input class="table-upper-btn color-g" type="button" value="按工程状态">
+		</div>
+	</div>
+	<table class="y-table">
+		<thead>
+			<th class="w30p">工程名称</th>
+			<th class="w25p">招标单位</th>
+			<th class="w15p">开标时间</th>
+			<th class="w10p">工程状态</th>
+			<th class="w20p">操作</th>
+			<th class="my-scroll-null-th"></th>
+		</thead>
+		<tbody class="my-scroll">
+			<tr>
+				<td class="w30p  class-with-tooltip" data-title="华润万家西北区西安明光路项目结构加固工程明光路项目结构加固工程明光路项目结构加固工程华润万家西北区西安明光路项目结构加固工程明光路项目结构加固工程明光路项目结构加固工程">
+					<div class="nowarp">华润万家西北区西安明光路项目结构加固工程明光路项目结构加固工程明光路项目结构加固工程华润万家西北区西安明光路项目结构加固工程明光路项目结构加固工程明光路项目结构加固工程</div>
+				</td>
+				<td class="w25p  class-with-tooltip"  data-title="深圳市中诺思科技股份有限公司">
+					<div class="nowarp">深圳市中诺思科技股份有限公司</div>
+				</td>
+				<!-- <td class="w25p nowarp"  title="深圳市中诺思科技股份有限公司">深圳市中诺思科技股份有限公司</td> -->
+				<td class="w15p">2018-03-18</td>
+				<td class="w10p color-green">运行中</td>
+				<td class="w20p">
+					<input class="table-btn color-yellow" type="button" value="修改">
+					<input class="table-btn color-g" type="button" value="开标">
+				</td>
+			</tr>
+			<tr>
+				<td class="w30p"> 华润万家西北工程 </td>
+				<td class="w25p">深圳市中诺思科技股份有限公司</td>
+				<td class="w15p">2018-03-18</td>
+				<td class="w10p color-green">运行中</td>
+				<td class="w20p">
+					<input class="table-btn color-yellow" type="button" value="修改">
+					<input class="table-btn color-g" type="button" value="开标">
+				</td>
+			</tr>
+			<tr>
+				<td class="w30p">华润万家西北区西安明光路项目结构加固工程</td>
+				<td class="w25p">深圳市中诺思科技股份有限公司</td>
+				<td class="w15p">2018-03-18</td>
+				<td class="w10p color-green">运行中</td>
+				<td class="w20p">
+					<input class="table-btn color-yellow" type="button" value="修改">
+					<input class="table-btn color-g" type="button" value="开标">
+				</td>
+			</tr>
+			<tr>
+				<td class="w30p">华润万家西北区西安明光路项目结构加固工程</td>
+				<td class="w25p">深圳市中诺思科技股份有限公司</td>
+				<td class="w15p">2018-03-18</td>
+				<td class="w10p color-green">运行中</td>
+				<td class="w20p">
+					<input class="table-btn color-yellow" type="button" value="修改">
+					<input class="table-btn color-g" type="button" value="开标">
+				</td>
+			</tr>
+			<tr>
+				<td class="w30p">华润万家西北区西安明光路项目结构加固工程</td>
+				<td class="w25p">深圳市中诺思科技股份有限公司</td>
+				<td class="w15p">2018-03-18</td>
+				<td class="w10p color-green">运行中</td>
+				<td class="w20p">
+					<input class="table-btn color-yellow" type="button" value="修改">
+					<input class="table-btn color-g" type="button" value="开标">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- basic scripts -->
+	<script src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+   	<!-- bootstrap  时间框插件 -->
+	<script src="../js/bootstrap-datetimepicker/moment-with-locales.js"></script>
+   	<script src="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+   	<script src="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+    <!-- 旋转插件 -->
+	<script src="../js/jquery.rotate.min.js"></script>
+	<!-- 自定义js -->
+	<script src="../js/my-common.js"></script>
+</body>
+</html>

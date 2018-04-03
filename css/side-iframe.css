@@ -1,0 +1,12 @@
+/*
+* @Author: pz
+* @Date:   2018-03-27 16:42:12
+* @Last Modified by:   pz
+* @Last Modified time: 2018-04-03 15:51:59
+*/
+.child-body { font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif; line-height: 1.42857143; color:#FFF;margin: 0;}
+.child-html,.child-body { width:98%; height: 98%; margin: 0 1%; background: transparent;}
+
+/*自定义tooltip*/
+.class-with-tooltip{position: relative;}
+.class-with-tooltip:hover:after{content: attr(data-title); position: absolute; padding: 1px 5px; border: 1px solid gray; background: whitesmoke; font-size: 12px; color: gray; border-radius: 3px; left: 70%; width: fit-content; z-index: 9; }

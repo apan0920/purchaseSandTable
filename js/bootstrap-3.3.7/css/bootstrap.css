@@ -6009,6 +6009,7 @@ button.close {
   opacity: 0;
 
   line-break: auto;
+ 
 }
 .tooltip.in {
   filter: alpha(opacity=90);

@@ -2,7 +2,7 @@
 * @Author: pz
 * @Date:   2018-03-28 14:15:48
 * @Last Modified by:   pz
-* @Last Modified time: 2018-03-30 17:02:57
+* @Last Modified time: 2018-04-03 14:42:35
 */
 $(function () {
 	//设置日期时间控件
@@ -10,18 +10,25 @@ $(function () {
         language: 'zh-CN',//显示中文
         format: 'yyyy-mm-dd',//显示格式
         weekStart: 1,
-        todayBtn:  1,//显示今日按钮
+        todayBtn:  0,//显示/隐藏今日按钮
 		autoclose: 1,//选中自动关闭
 		todayHighlight: 1,
 		startView: 2,
 		minView: 2,//设置只显示到天 、1是到小时
 		forceParse: 0
     });
-  	
+    // 加载子界面调试
+    // loadChildContent("y-wapper");
+    loadChildContent("g-wapper");
+    loadChildContent("p-wapper");
+  	// 根据窗口变化调整iframe大小
+	$(window).resize(function() {
+		// windowResize("y-wapper");
+	   windowResize("g-wapper");
+	   windowResize("p-wapper");
+	});
 
-   // 加载子界面调试
-   loadChildContent("g-wapper");
-   loadChildContent("p-wapper");
+// 以下为调试内容//--------------------------------------------//////////////////////
 	// 旋转调试
 	// startRotate($("#menuBtnY"));
 
@@ -34,25 +41,29 @@ $(function () {
 	// 倒计时调试
 	// countdown(60);//60分钟<==>60天
 	// 　　$(".y-table > tbody").mCustomScrollbar();
+　　
 });
 
 
 
 // 生产区/销售区 加载子界面
 function loadChildContent(objId) {
-	// var w = document.documentElement.offsetWidth || document.body.offsetWidth ;
-	// var h = document.documentElement.offsetHeight || document.body.offsetHeight ;
+	// $("#"+objId).load("../html/g-1.html");
+	$("#"+objId).attr("src", "../html/side-ifame.html");
+	windowResize(objId);
+}
+
+// 根据窗口变化调整iframe大小
+function windowResize(objId) {
 	var ph = $("#"+objId).parent().height();
   	var pw = $("#"+objId).parent().width();
-	$("#"+objId).load("../html/g-1.html");
-	$("#"+objId).css({"width":ph-4 ,"height":pw-69,"margin-top":-(pw-69)/2});
+ 	$("#"+objId).css({"width":ph-4 ,"height":pw-69,"margin-top":-(pw-69)/2});
 
   	if (objId == "g-wapper") {
 		$("#"+objId).css({"margin-left":-(ph-4+69)/2});
   	} else if (objId == "p-wapper") {
 		$("#"+objId).css({"margin-left":-(ph-4-69)/2});
   	}
-	
 }
 
 // 返回按钮
@@ -94,9 +105,6 @@ $(".btn-bg-rect").click(function () {
 	}else if (belongArea == "采购区") {
 		$(".y-type-btn").css({"margin-left": "-123.5px"});
 	}
-
-	
-	    
 });
 
 /*转换--旋转动画*/
@@ -198,3 +206,4 @@ function countdown(Fen) {
 		1000
 		)
 }
+
